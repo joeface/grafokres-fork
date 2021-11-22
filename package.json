@@ -1,7 +1,7 @@
 {
-  "name": "grafokres",
-  "version": "1.1.0",
-  "description": "RFE/RL branch of Grafokres app created by Rozhlas",
+  "name": "grafokres-fork",
+  "version": "1.0.0",
+  "description": "RFE/RL branch of Grafokres app created by DataRozhlas",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DataRozhlas/grafokres.git"
+    "url": "git+https://github.com/joeface/grafokres-fork.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DataRozhlas/grafokres/issues"
+    "url": "https://github.com/joeface/grafokres-fork/issues"
   },
-  "homepage": "https://github.com/DataRozhlas/grafokres#readme",
+  "homepage": "https://github.com/joeface/grafokres-fork#readme",
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
