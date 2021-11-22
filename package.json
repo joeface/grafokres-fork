@@ -1,0 +1,44 @@
+{
+  "name": "grafokres",
+  "version": "1.1.0",
+  "description": "RFE/RL branch of Grafokres app created by Rozhlas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataRozhlas/grafokres.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DataRozhlas/grafokres/issues"
+  },
+  "homepage": "https://github.com/DataRozhlas/grafokres#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "d3": "^5.12.0",
+    "d3-selection": "^1.4.0",
+    "d3-selection-multi": "^1.0.1",
+    "html-webpack-injector": "^1.1.4",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@webpack-cli/serve": "^1.6.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
