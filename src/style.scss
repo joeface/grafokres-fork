@@ -1,3 +1,10 @@
+body {
+  --font: 'Kanit', sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font);
+}
 .graf svg {
     overflow: visible;
 }
@@ -7,52 +14,68 @@
 }
 
 .graf {
-  margin-bottom:10px;
+  margin-bottom:20px;
   margin-top:-40px;
   max-width: 600px;
+  color: #666;
 }
 
 .line {
   fill: none;
-  stroke: black;
-  stroke-width: 3;
+  stroke: #facc69;
+  stroke-width: 4;
 } 
 
 .area {
-  fill: #eee;
+  fill: transparent;
 }
 
 .your-line {
-  stroke: #f0f;
-  stroke-width: 3;
+  stroke: #b4babc;
+  stroke-width: 4;
   stroke-dasharray: 5 5;
 }
 
 .introtext, .valuedisplay {
-  font-family: sans-serif;
-  font-size: small;
+  font-family: var(--font);
+}
+
+.introtext {
+  font-size: 13px;
 }
 
 .grafbtn {
   margin: 0 auto;
-  width: 40%;
-  line-height: 2.2em;
-  height: 3em;
+  //width: 80px;
+  line-height: 1em;
   background-color: #e7e7e7; 
   color: black;
   border: none;
-  border-radius: 5px;
-  padding: 5px 20px;
+  border-radius: 4px;
+  padding: 8px 12px 6px;
   margin-top: 80px;
   text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   display: block;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: var(--font);
+  opacity: .8;
+  transition: opacity .2s;
   cursor: pointer;
-  transition: opacity .3s;
+  &:hover {
+    opacity: 1;
+  }
+  &.disabled {
+    opacity: 0.4;
+    cursor: default;
+    &:hover {
+      opacity: .5;
+    }
+  }
 }
 
-.disabled {
-  opacity: 0.4;
-  cursor: default;
+
+.introtext {
+  font-family: var(--font);
 }
