@@ -26,22 +26,22 @@ const data_education_population = [{ 'value': 6.5, 'year': 1970 }, { 'value': 7.
 
 
 grafokres({
-  elem: "#chart-fertility-rate",
-  data: data_fertility_rate,
-  cutoff: 1990,
-  yMax: 4,
-  interval: "year",
-  btnFn: postResult,
-});
-
-
-grafokres({
   elem: "#chart-life-expectancy",
   data: data_life_expectancy,
   cutoff: 1990,
   interval: "year",
   btnFn: postResult,
   yFormat: "x",
+  showCTA: true
+});
+
+grafokres({
+  elem: "#chart-fertility-rate",
+  data: data_fertility_rate,
+  cutoff: 1990,
+  yMax: 4,
+  interval: "year",
+  btnFn: postResult,
 });
 
 
@@ -54,6 +54,7 @@ grafokres({
   btnFn: postResult,
   yFormat: "x",
 });
+
 
 grafokres({
   elem: "#chart-divorces",

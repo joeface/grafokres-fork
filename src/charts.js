@@ -8,6 +8,7 @@ export const grafokres = ({
   const hiddenFrom = parameters.cutoff;
   const interval = (parameters.interval === "decade") ? 10 : 1;
   const precision = (yMax > 100) ? 1 : 10;
+  const showCTA = parameters.showCTA;
 
   const clamp = (a, b, c) => Math.max(a, Math.min(b, c));
 
@@ -55,13 +56,14 @@ export const grafokres = ({
     .append("text")
     .attr("x", xscale(d3.max(data.map((x) => x.year))));
 
+  const label_top_offset = height / 2 - 100;
+  const text_left = width - 360 - (width - xscale(hiddenFrom) + 1) / 4;
+
   const introText = svg.append("g")
     .attr("class", "introtext")
     .append("text")
-    .attr("y", height / 2 - 40)
+    .attr("y", label_top_offset)
     .attr("text-anchor", "middle");
-
-  const text_left = width - 360 - (width - xscale(hiddenFrom) + 1) / 4;
 
   introText.append("tspan")
     .attr("x", text_left < 80 ? 80 : text_left)
@@ -74,14 +76,18 @@ export const grafokres = ({
 
   const text_bbox = introText._groups[0][0].getBBox()
 
-  const ay = height / 2 - 40;
   const ax = text_bbox.x + text_bbox.width + 10;
 
   const arrowObject = svg.append("g")
-    .attr("transform", "translate(" + ax + "," + ay + ")")
+    .attr("transform", "translate(" + ax + "," + label_top_offset + ")")
     .attr("class", "chart-arrow");
   arrowObject.append("path").attr("d", "M27.53,36C28,16.7,15.66.38,0,.38").attr("stroke", "#000").attr("fill", "none");
   arrowObject.append("path").attr("d", "M31.12,30.86a.36.36,0,0,0-.51.12L27.5,35.8,24.44,31a.37.37,0,1,0-.63.4l3.37,5.35a.41.41,0,0,0,.32.18.38.38,0,0,0,.32-.18l3.42-5.32a.36.36,0,0,0,.06-.2A.37.37,0,0,0,31.12,30.86Z").attr("stroke", "#000").attr("fill", "none");
+
+  if (!showCTA) {
+    introText.style("display", "none");
+    arrowObject.style("display", "none");
+  }
 
   const area = d3.area().x((x) => xscale(x.year) + 1).y0((x) => yscale(x.value)).y1(height);
   const line = d3.area().x((x) => xscale(x.year) + 1).y((x) => yscale(x.value));
@@ -114,8 +120,11 @@ export const grafokres = ({
 
   const drag = d3.drag()
     .on("drag", function () {
-      introText.style("display", "none");
-      arrowObject.style("display", "none");
+      console.log(showCTA)
+      if (true === showCTA) {
+        introText.style("display", "none");
+        arrowObject.style("display", "none");
+      }
 
       if (!completed) {
         const pos = d3.mouse(this);
