@@ -73,7 +73,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   btnFn: postResult,
-  yFormat: "x + ' %'",
+  yFormat: "x + '%'",
 });
 
 
@@ -84,7 +84,7 @@ grafokres({
   interval: "year",
   yMax: 200,
   btnFn: postResult,
-  yFormat: "x + ' %'",
+  yFormat: "x + '%'",
 });
 
 
@@ -94,7 +94,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   btnFn: postResult,
-  yFormat: "x + ' %'",
+  yFormat: "x + '%'",
 });
 
 
@@ -104,7 +104,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   btnFn: postResult,
-  yFormat: "x + ' %'",
+  yFormat: "x + '%'",
 });
 
 
@@ -114,7 +114,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   btnFn: postResult,
-  yFormat: "x + ' %'",
+  yFormat: "x + '%'",
 });
 
 

@@ -18,7 +18,8 @@ export const grafokres = ({
     .append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("transform", "translate(50,50)");
+    .attr("viewBox", "-30 0 " + width + " " + height)
+  //.attr("transform", "translate(30,10)");
 
   const btn = d3.select(elem)
     .append("button")
@@ -28,7 +29,7 @@ export const grafokres = ({
 
   const xscale = d3.scaleLinear()
     .domain([d3.min(data.map((x) => x.year)), d3.max(data.map((x) => x.year))])
-    .range([0, width - 100]);
+    .range([0, width - 40]);
 
   const yscale = d3.scaleLinear()
     .domain([yMin, yMax])
@@ -44,8 +45,7 @@ export const grafokres = ({
     .ticks(5)
     .tickFormat((x) => eval(yFormat));
 
-  svg.append("g")
-    .call(y_axis);
+  svg.append("g").call(y_axis);
 
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
@@ -107,6 +107,7 @@ export const grafokres = ({
   correctSel.append("path")
     .attr("class", "line")
     .attr("d", line(data));
+
   const yourDataSel = svg.append("path").attr("class", "your-line");
 
   const yourData = data

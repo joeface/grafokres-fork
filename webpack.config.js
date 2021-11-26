@@ -20,7 +20,7 @@ module.exports = {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "charts.js"
+    filename: "[name].[chunkhash].js"
   },
   plugins: [
     new CleanWebpackPlugin(),
