@@ -32,6 +32,7 @@ grafokres({
   interval: "year",
   btnFn: postResult,
   yFormat: "x",
+  yMin: 50,
   showCTA: true
 });
 
