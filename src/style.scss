@@ -12,7 +12,7 @@ body, html {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 450px;
   margin: 0 auto;
   padding: 10px 15px 40px;
   //overflow: hidden;
@@ -36,7 +36,8 @@ h1, h2 {
   //margin-bottom:60px;
   //margin-top:-40px;
   padding-bottom: 40px;
-  max-width: 600px;
+  margin: 20px auto;
+  max-width: 450px;
   color: #666;
   
 }
@@ -46,6 +47,21 @@ h1, h2 {
   stroke: #facc69;
   stroke-width: 4;
 } 
+
+
+.tick line, path.domain {
+  stroke: #b4babc;
+  stroke-width: 1;
+}
+
+.x_axis  {
+  path.domain {
+    stroke-width: 0;
+  }
+  text {
+    transform: translate(0, -0.32em);
+  }
+}
 
 .area {
   fill: transparent;

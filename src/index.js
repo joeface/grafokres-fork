@@ -2,9 +2,6 @@ import grafokres from './charts';
 
 console.log('Init Library')
 
-
-const stamp = Date.now() + Math.floor(Math.random() * 10000);
-
 const data_fertility_rate = [{ 'value': 2.52, 'year': 1960 }, { 'value': 2.45, 'year': 1961 }, { 'value': 2.36, 'year': 1962 }, { 'value': 2.27, 'year': 1963 }, { 'value': 2.18, 'year': 1964 }, { 'value': 2.13, 'year': 1965 }, { 'value': 2.1, 'year': 1966 }, { 'value': 2.04, 'year': 1967 }, { 'value': 1.99, 'year': 1968 }, { 'value': 1.97, 'year': 1969 }, { 'value': 1.99, 'year': 1970 }, { 'value': 2.03, 'year': 1971 }, { 'value': 2.04, 'year': 1972 }, { 'value': 2.01, 'year': 1973 }, { 'value': 2.0, 'year': 1974 }, { 'value': 1.98, 'year': 1975 }, { 'value': 1.97, 'year': 1976 }, { 'value': 1.95, 'year': 1977 }, { 'value': 1.92, 'year': 1978 }, { 'value': 1.9, 'year': 1979 }, { 'value': 1.89, 'year': 1980 }, { 'value': 1.91, 'year': 1981 }, { 'value': 2.04, 'year': 1982 }, { 'value': 2.11, 'year': 1983 }, { 'value': 2.06, 'year': 1984 }, { 'value': 2.05, 'year': 1985 }, { 'value': 2.15, 'year': 1986 }, { 'value': 2.22, 'year': 1987 }, { 'value': 2.12, 'year': 1988 }, { 'value': 2.01, 'year': 1989 }, { 'value': 1.89, 'year': 1990 }, { 'value': 1.73, 'year': 1991 }, { 'value': 1.55, 'year': 1992 }, { 'value': 1.39, 'year': 1993 }, { 'value': 1.4, 'year': 1994 }, { 'value': 1.34, 'year': 1995 }, { 'value': 1.27, 'year': 1996 }, { 'value': 1.22, 'year': 1997 }, { 'value': 1.23, 'year': 1998 }, { 'value': 1.16, 'year': 1999 }, { 'value': 1.2, 'year': 2000 }, { 'value': 1.22, 'year': 2001 }, { 'value': 1.29, 'year': 2002 }, { 'value': 1.32, 'year': 2003 }, { 'value': 1.34, 'year': 2004 }, { 'value': 1.29, 'year': 2005 }, { 'value': 1.31, 'year': 2006 }, { 'value': 1.42, 'year': 2007 }, { 'value': 1.5, 'year': 2008 }, { 'value': 1.54, 'year': 2009 }, { 'value': 1.57, 'year': 2010 }, { 'value': 1.58, 'year': 2011 }, { 'value': 1.69, 'year': 2012 }, { 'value': 1.71, 'year': 2013 }, { 'value': 1.75, 'year': 2014 }, { 'value': 1.78, 'year': 2015 }, { 'value': 1.76, 'year': 2016 }, { 'value': 1.62, 'year': 2017 }, { 'value': 1.58, 'year': 2018 }, { 'value': 1.5, 'year': 2019 }];
 
 const data_life_expectancy = [{ 'value': 66.1, 'year': 1960 }, { 'value': 66.6, 'year': 1961 }, { 'value': 67.0, 'year': 1962 }, { 'value': 67.3, 'year': 1963 }, { 'value': 67.6, 'year': 1964 }, { 'value': 67.7, 'year': 1965 }, { 'value': 67.8, 'year': 1966 }, { 'value': 67.9, 'year': 1967 }, { 'value': 67.9, 'year': 1968 }, { 'value': 67.9, 'year': 1969 }, { 'value': 68.1, 'year': 1970 }, { 'value': 68.4, 'year': 1971 }, { 'value': 68.3, 'year': 1972 }, { 'value': 68.3, 'year': 1973 }, { 'value': 68.3, 'year': 1974 }, { 'value': 67.7, 'year': 1975 }, { 'value': 67.5, 'year': 1976 }, { 'value': 67.4, 'year': 1977 }, { 'value': 67.4, 'year': 1978 }, { 'value': 67.1, 'year': 1979 }, { 'value': 67.0, 'year': 1980 }, { 'value': 67.3, 'year': 1981 }, { 'value': 67.8, 'year': 1982 }, { 'value': 67.7, 'year': 1983 }, { 'value': 67.2, 'year': 1984 }, { 'value': 67.9, 'year': 1985 }, { 'value': 69.4, 'year': 1986 }, { 'value': 69.4, 'year': 1987 }, { 'value': 69.5, 'year': 1988 }, { 'value': 69.2, 'year': 1989 }, { 'value': 68.9, 'year': 1990 }, { 'value': 68.5, 'year': 1991 }, { 'value': 66.9, 'year': 1992 }, { 'value': 64.9, 'year': 1993 }, { 'value': 64.5, 'year': 1994 }, { 'value': 64.7, 'year': 1995 }, { 'value': 65.9, 'year': 1996 }, { 'value': 66.7, 'year': 1997 }, { 'value': 67.0, 'year': 1998 }, { 'value': 66.0, 'year': 1999 }, { 'value': 65.5, 'year': 2000 }, { 'value': 65.4, 'year': 2001 }, { 'value': 65.1, 'year': 2002 }, { 'value': 65.0, 'year': 2003 }, { 'value': 65.5, 'year': 2004 }, { 'value': 65.5, 'year': 2005 }, { 'value': 66.7, 'year': 2006 }, { 'value': 67.6, 'year': 2007 }, { 'value': 67.9, 'year': 2008 }, { 'value': 68.7, 'year': 2009 }, { 'value': 68.8, 'year': 2010 }, { 'value': 69.7, 'year': 2011 }, { 'value': 70.1, 'year': 2012 }, { 'value': 70.6, 'year': 2013 }, { 'value': 70.7, 'year': 2014 }, { 'value': 71.2, 'year': 2015 }, { 'value': 71.7, 'year': 2016 }, { 'value': 72.5, 'year': 2017 }, { 'value': 72.7, 'year': 2018 }, { 'value': 73.1, 'year': 2019 }, { 'value': 71.5, 'year': 2020 }];
@@ -30,8 +27,8 @@ grafokres({
   data: data_life_expectancy,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yFormat: "x",
+  yMax: 80,
   yMin: 50,
   showCTA: true
 });
@@ -42,7 +39,6 @@ grafokres({
   cutoff: 1990,
   yMax: 4,
   interval: "year",
-  btnFn: postResult,
 });
 
 
@@ -52,7 +48,6 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yMax: 20,
-  btnFn: postResult,
   yFormat: "x",
 });
 
@@ -62,7 +57,6 @@ grafokres({
   data: data_divorces,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yMax: 10,
   yFormat: "x",
 });
@@ -73,7 +67,6 @@ grafokres({
   data: data_urban_population,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yFormat: "x + '%'",
 });
 
@@ -84,7 +77,6 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yMax: 200,
-  btnFn: postResult,
   yFormat: "x + '%'",
 });
 
@@ -94,7 +86,6 @@ grafokres({
   data: data_fixed_subscriptions,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yFormat: "x + '%'",
 });
 
@@ -104,7 +95,6 @@ grafokres({
   data: data_internet_population,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yFormat: "x + '%'",
 });
 
@@ -114,17 +104,5 @@ grafokres({
   data: data_education_population,
   cutoff: 1990,
   interval: "year",
-  btnFn: postResult,
   yFormat: "x + '%'",
 });
-
-
-function postResult(btn) {
-  return
-  const xhr = new XMLHttpRequest();
-  xhr.addEventListener("load", response);
-  xhr.open("POST", "https://9x274i2n0k.execute-api.eu-central-1.amazonaws.com/prod/");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify({ user_id: stamp, q_id: btn.attr("id").substring(0, btn.attr("id").length - 3), data: btn.attr("data-entered").split(",") }));
-  function response() { console.log(this.response); }
-}
