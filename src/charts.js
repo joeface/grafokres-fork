@@ -2,7 +2,7 @@ import * as d3 from "d3";
 
 export const grafokres = ({
   elem, data, btnFn,
-  yFormat = "x", yMin = 0, yMax = 100,
+  yFormat = "x", yMin = 0, yMax = 100, lang = 'en',
   ...parameters
 }) => {
   const hiddenFrom = parameters.cutoff;
@@ -24,7 +24,7 @@ export const grafokres = ({
     .append("button")
     .attr("class", "grafbtn disabled")
     .attr("id", `${elem.substring(1)}btn`)
-    .text("Confirm");
+    .text('ru' == lang ? "Показать результат" : "Confirm");
 
   const xscale = d3.scaleLinear()
     .domain([d3.min(data.map((x) => x.year)), d3.max(data.map((x) => x.year))])
@@ -68,12 +68,12 @@ export const grafokres = ({
 
   introText.append("tspan")
     .attr("x", (text_left < 80 ? 70 : text_left) + left_offset)
-    .text("Click and drag to finish");
+    .text('ru' == lang ? "Продолжите линию," : "Click and drag to finish");
 
   introText.append("tspan")
     .attr("x", (text_left < 80 ? 70 : text_left) + left_offset)
     .attr("dy", "14")
-    .text("the rest of the chart");
+    .text('ru' == lang ? "чтобы закончить график" : "the rest of the chart");
 
   const text_bbox = introText._groups[0][0].getBBox()
 
@@ -168,8 +168,6 @@ export const grafokres = ({
       btnFn(btn);
     }
   }
-
-  console.log('Init Chart')
 
   svg.call(drag);
 };

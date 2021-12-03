@@ -21,6 +21,7 @@ const data_internet_population = [{ 'value': 0.0, 'year': 1975 }, { 'value': 0.0
 
 const data_education_population = [{ 'value': 6.5, 'year': 1970 }, { 'value': 7.8, 'year': 1975 }, { 'value': 9.4, 'year': 1980 }, { 'value': 10.9, 'year': 1985 }, { 'value': 12.2, 'year': 1990 }, { 'value': 13.8, 'year': 1995 }, { 'value': 15.9, 'year': 2000 }, { 'value': 17.7, 'year': 2005 }, { 'value': 19.6, 'year': 2010 }, { 'value': 21.0, 'year': 2015 }, { 'value': 22.0, 'year': 2020 }];
 
+const lang = 'ru';
 
 grafokres({
   elem: "#chart-life-expectancy",
@@ -30,8 +31,10 @@ grafokres({
   yFormat: "x",
   yMax: 80,
   yMin: 50,
-  showCTA: true
+  showCTA: true,
+  lang: lang
 });
+
 
 grafokres({
   elem: "#chart-fertility-rate",
@@ -39,6 +42,7 @@ grafokres({
   cutoff: 1990,
   yMax: 4,
   interval: "year",
+  lang: lang
 });
 
 
@@ -49,6 +53,7 @@ grafokres({
   interval: "year",
   yMax: 20,
   yFormat: "x",
+  lang: lang
 });
 
 
@@ -59,6 +64,7 @@ grafokres({
   interval: "year",
   yMax: 10,
   yFormat: "x",
+  lang: lang
 });
 
 
@@ -68,6 +74,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yFormat: "x + '%'",
+  lang: lang
 });
 
 
@@ -78,6 +85,7 @@ grafokres({
   interval: "year",
   yMax: 200,
   yFormat: "x + '%'",
+  lang: lang
 });
 
 
@@ -87,6 +95,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yFormat: "x + '%'",
+  lang: lang
 });
 
 
@@ -96,6 +105,7 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yFormat: "x + '%'",
+  lang: lang
 });
 
 
@@ -105,4 +115,5 @@ grafokres({
   cutoff: 1990,
   interval: "year",
   yFormat: "x + '%'",
+  lang: lang
 });
